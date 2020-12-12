@@ -50,14 +50,20 @@
                                 <rect key="frame" x="133" y="60" width="101" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="billAmountChanged:" destination="Lmi-9u-HY1" eventType="editingChanged" id="UgF-HG-diA"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qbZ-rf-42f">
                                 <rect key="frame" x="133" y="110" width="101" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="tipPercentChanged:" destination="Lmi-9u-HY1" eventType="editingChanged" id="WwE-Zf-ve3"/>
+                                </connections>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ONc-t5-nUI">
-                                <rect key="frame" x="133" y="210" width="101" height="34"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ONc-t5-nUI">
+                                <rect key="frame" x="133" y="209" width="101" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -112,6 +118,12 @@
                             <constraint firstItem="lyn-Qh-XSE" firstAttribute="width" secondItem="aiy-Ev-EHk" secondAttribute="width" id="x8t-kq-TX6"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="billAmount" destination="2bv-G2-3vs" id="gJy-qa-WAD"/>
+                        <outlet property="tipAmount" destination="TnI-5y-lBl" id="8KM-Um-hmw"/>
+                        <outlet property="tipPercent" destination="qbZ-rf-42f" id="9Uq-kc-oJt"/>
+                        <outlet property="totalAmount" destination="ONc-t5-nUI" id="Od7-vN-WeA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Nn-d4-dHZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

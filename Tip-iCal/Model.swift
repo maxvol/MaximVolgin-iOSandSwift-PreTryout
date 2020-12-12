@@ -30,58 +30,37 @@
 /// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 /// THE SOFTWARE.
 
-import UIKit
+import Foundation
 
-class ViewController: UIViewController {
-
-  @IBOutlet weak var billAmount: UITextField!
-  @IBOutlet weak var tipPercent: UITextField!
-  @IBOutlet weak var tipAmount: UILabel!
-  @IBOutlet weak var totalAmount: UILabel!
+struct Model {
   // 1
-  var model = Model()
-  
-  override func viewDidLoad() {
-    super.viewDidLoad()
-    // 2
-    conditionallyUpdateUI()
-  }
-  
-  @IBAction func billAmountChanged(_ sender: Any) {
-    // 3
-    if let value = parse(billAmount.text) {
-      model.billAmount = value
-      conditionallyUpdateUI()
+  var shouldUpdateUI = true
+  // 2
+  var billAmount: Float = 0.0 {
+    didSet {
+      if billAmount != oldValue  {
+        shouldUpdateUI = true
+      }
     }
   }
-  
-  @IBAction func tipPercentChanged(_ sender: Any) {
-    // 4
-    if let value = parse(tipPercent.text) {
-      model.tipPercent = value
-      conditionallyUpdateUI()
+  // 3
+  var tipPercent: Float = 0.0 {
+    didSet {
+      if tipPercent != oldValue  {
+        shouldUpdateUI = true
+      }
     }
   }
-  
+  // 4
+  var tipAmount: Float {
+    get {
+      billAmount * tipPercent / 100.0
+    }
+  }
   // 5
-  func conditionallyUpdateUI() {
-    if model.shouldUpdateUI {
-      billAmount.text = format(model.billAmount)
-      tipPercent.text = format(model.tipPercent)
-      tipAmount.text = format(model.tipAmount)
-      totalAmount.text = format(model.totalAmount)
-      model.shouldUpdateUI = false
+  var totalAmount: Float {
+    get {
+      billAmount + tipAmount
     }
   }
-
-  // 6
-  func format(_ value: Float) -> String {
-    String(format: "%.2f", value)
-  }
-  
-  // 7
-  func parse(_ string: String?) -> Float? {
-    (string as NSString?)?.floatValue
-  }
-  
 }
