@@ -11,7 +11,7 @@
         <!--View Controller-->
         <scene sceneID="cRk-gU-1CC">
             <objects>
-                <viewController id="Lmi-9u-HY1" customClass="ViewController" sceneMemberID="viewController">
+                <viewController id="Lmi-9u-HY1" customClass="ViewController" customModule="Tip_iCal" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="24y-61-mHg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -51,7 +51,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
-                                    <action selector="billAmountChanged:" destination="Lmi-9u-HY1" eventType="editingChanged" id="UgF-HG-diA"/>
+                                    <action selector="billAmountChanged:" destination="Lmi-9u-HY1" eventType="editingChanged" id="8PP-t8-p0o"/>
                                 </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qbZ-rf-42f">
@@ -59,7 +59,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
-                                    <action selector="tipPercentChanged:" destination="Lmi-9u-HY1" eventType="editingChanged" id="WwE-Zf-ve3"/>
+                                    <action selector="tipPercentChanged:" destination="Lmi-9u-HY1" eventType="editingChanged" id="asJ-0b-DQH"/>
                                 </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ONc-t5-nUI">
@@ -119,10 +119,10 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="billAmount" destination="2bv-G2-3vs" id="gJy-qa-WAD"/>
-                        <outlet property="tipAmount" destination="TnI-5y-lBl" id="8KM-Um-hmw"/>
-                        <outlet property="tipPercent" destination="qbZ-rf-42f" id="9Uq-kc-oJt"/>
-                        <outlet property="totalAmount" destination="ONc-t5-nUI" id="Od7-vN-WeA"/>
+                        <outlet property="billAmount" destination="2bv-G2-3vs" id="J1N-BA-xqg"/>
+                        <outlet property="tipAmount" destination="TnI-5y-lBl" id="JI6-Ox-EFg"/>
+                        <outlet property="tipPercent" destination="qbZ-rf-42f" id="7i1-3X-Luc"/>
+                        <outlet property="totalAmount" destination="ONc-t5-nUI" id="7l2-8I-0u3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Nn-d4-dHZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
