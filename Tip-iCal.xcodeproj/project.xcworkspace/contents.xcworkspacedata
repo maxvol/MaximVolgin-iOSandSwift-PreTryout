@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:MyRWTutorial.xcodeproj">
+      location = "self:/Users/maxim/github/MaximVolgin-iOSandSwift-PreTryout/Tip-iCal.xcodeproj">
    </FileRef>
 </Workspace>
